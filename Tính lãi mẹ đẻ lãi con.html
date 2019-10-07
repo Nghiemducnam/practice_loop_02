@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Số tiền ban đầu</td>
+        <td>Số tháng cho vay</td>
+        <td>Lãi xuất (%)</td>
+    </tr>
+
+    <tr>
+        <td><input type="text" id="ip1"></td>
+        <td><input type="text" id="ip2"></td>
+        <td><input type="text" id="ip3"></td>
+        <td><button type="button" onclick="showResult()">Tính lãi</button></td>
+    </tr>
+
+    <script>
+        function showResult() {
+            let firstMoney= Number(document.getElementById("ip1").value);
+            let time= Number(document.getElementById("ip2").value);
+            let interest= Number(document.getElementById("ip3").value);
+            let total= firstMoney*(Math.pow(1+(interest/100),time));
+               document.write("số tiền lãi bạn phải trả là: "  + parseInt(total));
+
+
+        }
+    </script>
+</table>
+
+</body>
+</html>
